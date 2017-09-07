@@ -5,7 +5,7 @@ print("2: delete a name")
 print("3: modify a name")
 print("4: search a name")
 print("====================")
-choice = int(input("Please enter your choice:"))
+choice = int(raw_input("Please enter your choice:"))
 nameList = []
 
 def addName(name,nameList):
@@ -25,7 +25,7 @@ def modifyName(name,nameList):
         print("not found!")
     else:
         nameList = deleteName(name,nameList)
-        newName = input("Please enter a new name:")
+        newName = raw_input("Please enter a new name:")
         newNameList = addName(newName,nameList)
         return newNameList
 
@@ -38,23 +38,23 @@ def findName(name,nameList):
         return 1
 
 if choice == 1:
-    newName = input("Please enter a name to add:")
+    newName = raw_input("Please enter a name to add:")
     print("================")
     newNameList = addName(newName,nameList)
     print(nameList)
     print(newNameList)
 elif choice == 2:
-    delName = input("Please enter a name to delete:")
+    delName = raw_input("Please enter a name to delete:")
     newNameList = deleteName(delName,nameList)
     print(nameList)
     print(newNameList)
 elif choice == 3:
-    modName = input("Please enter a name to modify:")
+    modName = raw_input("Please enter a name to modify:")
     newNameList = modifyName(modName,nameList)
     print(nameList)
     print(newNameList)
 elif choice == 4:
-    searchName = input("Please enter a name to find:")
+    searchName = raw_input("Please enter a name to find:")
     newNameList = findName(searchName,nameList)
     print(nameList)
     print(newNameList)
